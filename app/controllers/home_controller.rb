@@ -3,5 +3,6 @@ class HomeController < ApplicationController
   end
 
   def about
+    @message = "ここはAboutページの説明です"
   end
 end
