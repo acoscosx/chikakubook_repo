@@ -5,3 +5,5 @@
 <p>
   <%= @note.content %>
 </p>
+
+<%= link_to "編集", edit_note_path(@note.id), class: "btn edit-btn" %>

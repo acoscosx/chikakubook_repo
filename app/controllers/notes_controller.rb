@@ -17,4 +17,16 @@ class NotesController < ApplicationController
   def show
     @note = Note.find(params[:id])
   end
+
+  def edit
+    @note = Note.find(params[:id])
+  end
+
+  def update
+    @note = Note.find(params[:id])
+    @note.title = params[:title]
+    @note.content = params[:content]
+    @note.save
+    redirect_to note_path(@note.id)
+  end
 end
