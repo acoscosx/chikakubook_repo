@@ -1,0 +1,11 @@
+<h1>投稿の一覧</h1>
+<ul class="notes">
+  <% @notes.each do |note| %>
+    <li>
+      <p><%= link_to note.title, note_path(note.id) %></p>
+      <span class="content">
+        <%= note.content %>
+      </span>
+    </li>
+  <% end %>
+</ul>
